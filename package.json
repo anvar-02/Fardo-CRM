@@ -1,0 +1,16 @@
+{
+  "name": "fardo-crm-prototype",
+  "version": "0.1.0",
+  "description": "Fardo Consulting CRM — прототип",
+  "main": "main.js",
+  "author": "Fardo Consulting",
+  "scripts": { "start": "electron .", "dist": "electron-builder --win nsis portable" },
+  "devDependencies": { "electron": "^31.0.0", "electron-builder": "^24.13.3" },
+  "build": {
+    "appId": "com.fardo.crm.prototype",
+    "productName": "Fardo CRM",
+    "files": ["main.js", "preload.js", "index.html", "app.js", "styles.css"],
+    "win": { "target": ["nsis", "portable"] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}
